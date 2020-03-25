@@ -1,0 +1,68 @@
+/**
+ * Rota /recurso
+ * //
+ * metodo http
+ * get: lista/busca info
+ * post : cria info
+ * put: altera info
+ * delete: deleta info
+ */
+/**Tipos de paramentros
+ * 
+ * Query params: parametros nomeados enviados na rota apos '?'(filtro,paginação) 
+ * (app.get('/users'),(request, response)=>
+ *  return response.json({
+        evento: 'semana omnistack',
+        aluno: ' gustavo hamburg'
+    }); ) dentro do insominia http://localhost:3333/users?name=gustavo
+
+ * Route params: parametros utilizados para identificar recursos
+ (app.get('/users/:id'),(request, response)=>
+    const params = request.params;
+    console.log(params);
+
+ *  return response.json({
+        evento: 'semana omnistack',
+        aluno: ' gustavo hamburg'
+    }); ) dentro do insominia http://localhost:3333/users/1
+
+ * Request body: corpo da requisição, utilizado para criar ou alterar recursos
+ app.use(express.json());
+/**
+ app.get('/users', (request, response) => {
+    const body = request.body;
+    console.log(body);
+
+    return response.json({
+        evento: 'semana omnistack',
+        aluno: ' gustavo hamburg'
+    });
+}); dentro do insominia (post)(json) http://localhost:3333/users?name=gustavo&idade=25
+ */
+
+ /**
+  * SQL: MySQL, SQLite, PostgresSQL, Microsoft SQL SQL server
+  * NOsql: mongodb,couchdb,etc..
+  */
+ /**DRIVER: SELECT *FROM USERS
+  * Query builder: table('user').select('*').where()
+  */
+
+
+
+
+-------------------------------------------------
+entidades
+ong
+caso(incident)
+
+funcionalidades 
+
+login ong
+cadastro ong
+logout ong
+cadastrar novos casos
+deletar casos
+listar casos especificos de uma ong
+listar todos os casos
+entar em contato com a ong
